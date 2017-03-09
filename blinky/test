@@ -1,0 +1,137 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (devel)" "(s20150603-462-gfbd69e17)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "vhdl_textio";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fc4a06000a0 .scope module, "blinky_test" "blinky_test" 2 3;
+ .timescale -9 -11;
+v0x7fc4a070d2c0_0 .var "clk", 0 0;
+v0x7fc4a070d380_0 .net "pin_d1", 0 0, L_0x7fc4a070d8d0;  1 drivers
+v0x7fc4a070d410_0 .net "pin_d2", 0 0, L_0x7fc4a070db50;  1 drivers
+v0x7fc4a070d4a0_0 .net "pin_d3", 0 0, L_0x7fc4a070de00;  1 drivers
+v0x7fc4a070d530_0 .net "pin_d4", 0 0, L_0x7fc4a070e080;  1 drivers
+v0x7fc4a070d600_0 .net "pin_d5", 0 0, L_0x7fc4a070d690;  1 drivers
+S_0x7fc4a0600240 .scope module, "top_test" "top" 2 19, 3 1 0, S_0x7fc4a06000a0;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /OUTPUT 1 "pin_d5"
+    .port_info 2 /OUTPUT 1 "pin_d1"
+    .port_info 3 /OUTPUT 1 "pin_d2"
+    .port_info 4 /OUTPUT 1 "pin_d3"
+    .port_info 5 /OUTPUT 1 "pin_d4"
+L_0x7fc4a070d690 .functor BUFZ 1, v0x7fc4a070cdb0_0, C4<0>, C4<0>, C4<0>;
+v0x7fc4a0600540_0 .net *"_s10", 31 0, L_0x7fc4a070da30;  1 drivers
+L_0x101750098 .functor BUFT 1, C4<000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c360_0 .net *"_s13", 29 0, L_0x101750098;  1 drivers
+L_0x1017500e0 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c420_0 .net/2u *"_s14", 31 0, L_0x1017500e0;  1 drivers
+v0x7fc4a070c4e0_0 .net *"_s18", 31 0, L_0x7fc4a070dcb0;  1 drivers
+v0x7fc4a070c590_0 .net *"_s2", 31 0, L_0x7fc4a070d740;  1 drivers
+L_0x101750128 .functor BUFT 1, C4<000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c680_0 .net *"_s21", 29 0, L_0x101750128;  1 drivers
+L_0x101750170 .functor BUFT 1, C4<00000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c730_0 .net/2u *"_s22", 31 0, L_0x101750170;  1 drivers
+v0x7fc4a070c7e0_0 .net *"_s26", 31 0, L_0x7fc4a070df20;  1 drivers
+L_0x1017501b8 .functor BUFT 1, C4<000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c890_0 .net *"_s29", 29 0, L_0x1017501b8;  1 drivers
+L_0x101750200 .functor BUFT 1, C4<00000000000000000000000000000011>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070c9a0_0 .net/2u *"_s30", 31 0, L_0x101750200;  1 drivers
+L_0x101750008 .functor BUFT 1, C4<000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070ca50_0 .net *"_s5", 29 0, L_0x101750008;  1 drivers
+L_0x101750050 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x7fc4a070cb00_0 .net/2u *"_s6", 31 0, L_0x101750050;  1 drivers
+v0x7fc4a070cbb0_0 .net "clk", 0 0, v0x7fc4a070d2c0_0;  1 drivers
+v0x7fc4a070cc50_0 .var "curr_led", 1 0;
+v0x7fc4a070cd00_0 .var "curr_time", 23 0;
+v0x7fc4a070cdb0_0 .var "led_on", 0 0;
+v0x7fc4a070ce50_0 .net "pin_d1", 0 0, L_0x7fc4a070d8d0;  alias, 1 drivers
+v0x7fc4a070cfe0_0 .net "pin_d2", 0 0, L_0x7fc4a070db50;  alias, 1 drivers
+v0x7fc4a070d070_0 .net "pin_d3", 0 0, L_0x7fc4a070de00;  alias, 1 drivers
+v0x7fc4a070d100_0 .net "pin_d4", 0 0, L_0x7fc4a070e080;  alias, 1 drivers
+v0x7fc4a070d190_0 .net "pin_d5", 0 0, L_0x7fc4a070d690;  alias, 1 drivers
+E_0x7fc4a06004f0 .event posedge, v0x7fc4a070cbb0_0;
+L_0x7fc4a070d740 .concat [ 2 30 0 0], v0x7fc4a070cc50_0, L_0x101750008;
+L_0x7fc4a070d8d0 .cmp/eq 32, L_0x7fc4a070d740, L_0x101750050;
+L_0x7fc4a070da30 .concat [ 2 30 0 0], v0x7fc4a070cc50_0, L_0x101750098;
+L_0x7fc4a070db50 .cmp/eq 32, L_0x7fc4a070da30, L_0x1017500e0;
+L_0x7fc4a070dcb0 .concat [ 2 30 0 0], v0x7fc4a070cc50_0, L_0x101750128;
+L_0x7fc4a070de00 .cmp/eq 32, L_0x7fc4a070dcb0, L_0x101750170;
+L_0x7fc4a070df20 .concat [ 2 30 0 0], v0x7fc4a070cc50_0, L_0x1017501b8;
+L_0x7fc4a070e080 .cmp/eq 32, L_0x7fc4a070df20, L_0x101750200;
+    .scope S_0x7fc4a0600240;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc4a070cdb0_0, 0, 1;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x7fc4a070cc50_0, 0, 2;
+    %end;
+    .thread T_0;
+    .scope S_0x7fc4a0600240;
+T_1 ;
+    %wait E_0x7fc4a06004f0;
+    %load/vec4 v0x7fc4a070cd00_0;
+    %pad/u 32;
+    %cmpi/u 6000000, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %jmp/0xz  T_1.0, 5;
+    %load/vec4 v0x7fc4a070cdb0_0;
+    %inv;
+    %assign/vec4 v0x7fc4a070cdb0_0, 0;
+    %pushi/vec4 0, 0, 24;
+    %assign/vec4 v0x7fc4a070cd00_0, 0;
+    %load/vec4 v0x7fc4a070cc50_0;
+    %pad/u 32;
+    %cmpi/e 3, 0, 32;
+    %flag_mov 8, 4;
+    %jmp/0 T_1.2, 8;
+    %pushi/vec4 0, 0, 2;
+    %jmp/1 T_1.3, 8;
+T_1.2 ; End of true expr.
+    %load/vec4 v0x7fc4a070cc50_0;
+    %addi 1, 0, 2;
+    %jmp/0 T_1.3, 8;
+ ; End of false expr.
+    %blend;
+T_1.3;
+    %assign/vec4 v0x7fc4a070cc50_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x7fc4a070cd00_0;
+    %addi 1, 0, 24;
+    %assign/vec4 v0x7fc4a070cd00_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x7fc4a06000a0;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc4a070d2c0_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_0x7fc4a06000a0;
+T_3 ;
+    %vpi_call 2 6 "$dumpfile", "blinky_dump.vcd" {0 0 0};
+    %vpi_call 2 7 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fc4a06000a0 {0 0 0};
+    %delay 100000, 0;
+    %vpi_call 2 8 "$finish" {0 0 0};
+    %end;
+    .thread T_3;
+    .scope S_0x7fc4a06000a0;
+T_4 ;
+    %delay 100, 0;
+    %load/vec4 v0x7fc4a070d2c0_0;
+    %inv;
+    %assign/vec4 v0x7fc4a070d2c0_0, 0;
+    %jmp T_4;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "blinky_test.v";
+    "blinky.v";
