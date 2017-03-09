@@ -4,6 +4,4 @@ set_io pin_d3 97
 set_io pin_d4 96
 set_io pin_d5 95
 
-set_io pin_out 91
-
 set_io clk    21
