@@ -253,5 +253,10 @@ paket-files/
 
 # Verilog stuff
 *.bin
+*.blif
 *.asc
-*.pcf
+
+*/build/*.v
+*/build/*.pcf
+
+.deps

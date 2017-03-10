@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUILD	../blinky-magma/bake	/^BUILD = 'build'$/;"	kind:variable	line:9
+IceStick	../blinky-magma/blinky.py	/^from boards.icestick import IceStick$/;"	kind:namespace	line:4
+adders	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+and	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+arrays	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+autoclean	../blinky-magma/bake	/^from fabricate import main, autoclean, run$/;"	kind:namespace	line:7
+bake	../blinky-magma/bake	1;"	kind:file	line:1
+base	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+blinky.py	../blinky-magma/blinky.py	1;"	kind:file	line:1
+build	../blinky-magma/bake	/^def build():$/;"	kind:function	line:13
+clean	../blinky-magma/bake	/^def clean():$/;"	kind:function	line:24
+compile	../blinky-magma/bake	/^def compile(base):$/;"	kind:function	line:19
+etc	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+exists	../blinky-magma/bake	/^from os.path import join, exists$/;"	kind:namespace	line:6
+flip	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+flops	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+foundational	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+from	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+from	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+glob	../blinky-magma/bake	/^import os, glob$/;"	kind:namespace	line:5
+ice40	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+icestick	../blinky-magma/blinky.py	/^icestick = IceStick()       # define the current icestick$/;"	kind:variable	line:6
+import	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+import	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+join	../blinky-magma/bake	/^from os.path import join, exists$/;"	kind:namespace	line:6
+luts	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+magma	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+main	../blinky-magma/bake	/^from fabricate import main, autoclean, run$/;"	kind:namespace	line:7
+main	../blinky-magma/blinky.py	/^main = icestick.main()$/;"	kind:variable	line:10
+nice	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+os	../blinky-magma/bake	/^import os, glob$/;"	kind:namespace	line:5
+other	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+q	../blinky-magma/blinky.py	/^q = Counter(25)             # enable a memory that has 25-bit width connected to the clock (from mantle)$/;"	kind:variable	line:12
+run	../blinky-magma/bake	/^from fabricate import main, autoclean, run$/;"	kind:namespace	line:7
+specific	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+stuff	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+stuff	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+sys	../blinky-magma/blinky.py	/^import sys$/;"	kind:namespace	line:1
+tests	../blinky-magma/bake	/^tests = glob.glob('*.py')$/;"	kind:variable	line:11
+things	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
+wires	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
