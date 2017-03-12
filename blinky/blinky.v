@@ -15,7 +15,7 @@ module top(
 
     // Switch pin every half-second
     always @(posedge clk) begin
-        if (curr_time > 6000000) begin
+        if (currtime[23]) begin
             led_on <= ~led_on;
             curr_time <= 0;
             curr_led <= (curr_led == 3) ? 0 : curr_led + 1;

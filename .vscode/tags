@@ -15,6 +15,7 @@ base	../blinky-magma/blinky.py	/^from magma import *         # import base stuff
 blinky.py	../blinky-magma/blinky.py	1;"	kind:file	line:1
 build	../blinky-magma/bake	/^def build():$/;"	kind:function	line:13
 clean	../blinky-magma/bake	/^def clean():$/;"	kind:function	line:24
+clk_out	../blinky-magma/blinky.py	/^clk_out = q.O[23]$/;"	kind:variable	line:19
 compile	../blinky-magma/bake	/^def compile(base):$/;"	kind:function	line:19
 etc	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
 exists	../blinky-magma/bake	/^from os.path import join, exists$/;"	kind:namespace	line:6
@@ -32,11 +33,15 @@ join	../blinky-magma/bake	/^from os.path import join, exists$/;"	kind:namespace	
 luts	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
 magma	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
 main	../blinky-magma/bake	/^from fabricate import main, autoclean, run$/;"	kind:namespace	line:7
-main	../blinky-magma/blinky.py	/^main = icestick.main()$/;"	kind:variable	line:10
+main	../blinky-magma/blinky.py	/^main = icestick.main()$/;"	kind:variable	line:14
 nice	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
+not_clk_out	../blinky-magma/blinky.py	/^not_clk_out = Not()(clk_out)$/;"	kind:variable	line:34
 os	../blinky-magma/bake	/^import os, glob$/;"	kind:namespace	line:5
 other	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
-q	../blinky-magma/blinky.py	/^q = Counter(25)             # enable a memory that has 25-bit width connected to the clock (from mantle)$/;"	kind:variable	line:12
+q	../blinky-magma/blinky.py	/^q = Counter(24)$/;"	kind:variable	line:17
+reg_adder	../blinky-magma/blinky.py	/^reg_adder = Adders(2, cin=False, cout=False)$/;"	kind:variable	line:38
+reg_led	../blinky-magma/blinky.py	/^reg_led = Register(2, s=True)$/;"	kind:variable	line:25
+reg_led_next	../blinky-magma/blinky.py	/^reg_led_next = Register(2, s=True)$/;"	kind:variable	line:28
 run	../blinky-magma/bake	/^from fabricate import main, autoclean, run$/;"	kind:namespace	line:7
 specific	../blinky-magma/blinky.py	/^from mantle import *        # import nice stuff from ice40-specific stuff (flip flops, luts, adders, etc)$/;"	kind:namespace	line:3
 stuff	../blinky-magma/blinky.py	/^from magma import *         # import base stuff from magma (arrays, wires, and other foundational things)$/;"	kind:namespace	line:2
