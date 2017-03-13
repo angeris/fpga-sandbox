@@ -9,20 +9,15 @@ module top(
 );
     reg led_on = 0;
     reg [1:0] curr_led = 0;
-    reg [23:0] curr_time; // Holds the current time
+    reg [24:0] curr_time; // Holds the current time
 
-    assign pin_d5 = led_on;
+    assign pin_d5 = curr_time[23];
 
-    // Switch pin every half-second
-    always @(posedge clk) begin
-        if (currtime[23]) begin
-            led_on <= ~led_on;
-            curr_time <= 0;
-            curr_led <= (curr_led == 3) ? 0 : curr_led + 1;
-        end
-        else
-            curr_time <= curr_time + 1;
-    end
+    // Switch pin every 2^24/(12e6) of a second
+    always @(posedge clk)
+        curr_time <= curr_time + 1;
+    always @(posedge curr_time[23])
+        curr_led <= curr_led + 1;
 
     // Do the assignments for the red leds
     assign pin_d1 = (curr_led == 0);
