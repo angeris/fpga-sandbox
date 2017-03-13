@@ -1,3 +1,4 @@
 # Blinky using Pat Hanrahan's Magma
 
-This is just a quick re-writing of the previous blinky program, but using the open source, python-based Magma.
+A harder version of the previous program, but a nearly-literal translation from the
+Verilog code given previously.
