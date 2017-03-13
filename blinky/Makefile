@@ -1,36 +1,29 @@
-# Quick makefile written for icestick40 (1k) using icestorm toolchain
+PROJ_NAME = blinky
+PCF_FILE = $(PROJ_NAME).pcf
 
-SRC_FILES=blinky.v
-PCF_FILES=blinky.pcf
-BLIF_FILES=$(OUTPUT:.bin=.blif)
-ASC_FILES=$(OUTPUT:.bin=.asc)
-OUTPUT=blinky.bin
-SCANSION_PATH=/Applications/Scansion.app/Contents/MacOS/Scansion
-SRC_TEST=$(OUTPUT:%.bin=%_test.v)
-VFC_DUMP=$(OUTPUT:%.bin=%_dump.vcd)
+all: $(PROJ_NAME).bin
 
-all: $(OUTPUT)
-
-$(OUTPUT): $(ASC_FILES)
+%.bin: %.asc
 	icepack $< $@
 
-$(ASC_FILES): $(BLIF_FILES)
-	arachne-pnr -d 1k -p $(PCF_FILES) $< -o $@
+%.asc: %.blif
+	arachne-pnr -d 1k -o $@ -p $(PCF_FILE) $<
 
-$(BLIF_FILES):
-	yosys -p "synth_ice40 -blif $@" $(SRC_FILES)
+%.blif: %.v
+	yosys -p 'synth_ice40 -blif $@' $<
 
-upload: $(OUTPUT)
+upload: $(PROJ_NAME).bin
 	iceprog $<
 
-clean:
-	$(RM) *.bin *.blif *.asc
+explain: $(PROJ_NAME).asc
+	icebox_explain $<
 
-timing: $(ASC_FILES)
+timing: $(PROJ_NAME).asc
 	icetime -tmd hx1k $<
 
-test: $(SRC_FILES) $(SRC_TEST)
-	iverilog -o $(SRC_TEST:%.v=%) $(SRC_FILES) $(SRC_TEST)
-	vvp $(SRC_TEST:%.v=%)
-	@echo '[Scansion] $(VFC_DUMP)'
-	$(SCANSION_PATH) $(VFC_DUMP)
+clean:
+	rm -rf *.bin *.asc *.blif
+
+.PHONY: all upload explain clean
+
+.PRECIOUS: %.bin %.pnr %.blif
